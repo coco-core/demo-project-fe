@@ -55,6 +55,12 @@ const config = {
     devMiddleware: {
       writeToDisk: true,
     },
+    proxy: [
+      {
+        context: ['/user'],
+        target: 'http://localhost:8080',
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
