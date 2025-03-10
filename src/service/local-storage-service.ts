@@ -1,7 +1,7 @@
 import { service } from "coco-mvc";
 
 @service()
-class LocalStorage {
+class LocalStorageService {
   set(key: string, value: any) {
     localStorage.setItem(key, value);
   }
@@ -11,4 +11,4 @@ class LocalStorage {
   }
 }
 
-export default LocalStorage;
+export default LocalStorageService;
