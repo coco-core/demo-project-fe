@@ -3,7 +3,15 @@ const process = require("node:process");
 
 const config ={
   "webpack": {
-    "mode": "development"
+    "mode": "development",
+    "devServer": {
+      "proxy": [
+        {
+          context: ['/user'],
+          target: 'http://localhost:8080',
+        },
+      ]
+    }
   }
 }
 
