@@ -1,7 +1,7 @@
-import { view, route } from 'coco-mvc';
+import { page, route } from 'coco-mvc';
 
 @route('/welcome')
-@view()
+@page()
 class WelcomePage {
   render() {
     return <div>welcome to coco-mvc</div>;

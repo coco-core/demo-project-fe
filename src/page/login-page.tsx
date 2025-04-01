@@ -1,8 +1,8 @@
-import {view, route, Router, autowired, bind, ref} from 'coco-mvc';
+import {page, route, Router, autowired, bind, ref} from 'coco-mvc';
 import UserController from "../controller/user-controller";
 
 @route('/login')
-@view()
+@page()
 class LoginPage {
   @autowired()
   userController: UserController
