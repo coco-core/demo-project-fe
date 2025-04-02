@@ -1,17 +1,9 @@
 {
+  "extends": "./node_modules/@cocojs/cli/build-config/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["dom"],
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "resolveJsonModule": true,
-    "plugins": [
-      {
-        "transform": "@cocojs/typescript-transformer",
-        "transformProgram": true
-      }
-    ]
-  }
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
 }

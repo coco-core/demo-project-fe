@@ -1,6 +1,6 @@
 import {autowired, controller} from 'coco-mvc';
 import UserService from "../service/user-service";
-import LocalStorageService from "../service/local-storage-service";
+import LocalStorage from "../component/local-storage";
 
 @controller()
 class UserController {
@@ -9,7 +9,7 @@ class UserController {
   userService: UserService;
 
   @autowired()
-  localStorage: LocalStorageService
+  localStorage: LocalStorage
 
   async login(username: string, password: string): Promise<any> {
     const { data } = await this.userService.login(username, password);

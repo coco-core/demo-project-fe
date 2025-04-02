@@ -1,8 +1,8 @@
-import {view, route, Router, autowired, bind, ref} from 'coco-mvc';
+import {page, route, Router, autowired, bind, ref} from 'coco-mvc';
 import UserController from "../controller/user-controller";
 
 @route('/login')
-@view()
+@page()
 class LoginPage {
   @autowired()
   userController: UserController
@@ -11,8 +11,7 @@ class LoginPage {
   router: Router
 
   @bind()
-  async handleClick(e) {
-    e.preventDefault();
+  async handleClick() {
     const username = (this.username.current as any).value
     const password = (this.password.current as any).value
     const success = await this.userController.login(username, password);
@@ -29,7 +28,7 @@ class LoginPage {
   password: { current: HTMLElement }
 
   render() {
-    return <form>
+    return <div>
       <p>
         <label htmlFor="username">用户名</label>
         <input id="username" name="username" ref={this.username} />
@@ -39,7 +38,7 @@ class LoginPage {
         <input id='password' name="password" type={'password'} ref={this.password} />
       </p>
       <button onClick={this.handleClick}>登录</button>
-    </form>;
+    </div>;
   }
 }
 
