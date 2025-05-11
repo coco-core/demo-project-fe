@@ -1,18 +1,18 @@
 import {autowired, controller} from 'coco-mvc';
-import UserService from "../service/user-service";
+import UserApi from "@/api/user-api";
 import LocalStorage from "../component/local-storage";
 
 @controller()
 class UserController {
 
   @autowired()
-  userService: UserService;
+  userApi: UserApi;
 
   @autowired()
   localStorage: LocalStorage
 
   async login(username: string, password: string): Promise<any> {
-    const { data } = await this.userService.login(username, password);
+    const { data } = await this.userApi.login(username, password);
     const { success, token} = data;
     if (success) {
       this.localStorage.set('token', token);

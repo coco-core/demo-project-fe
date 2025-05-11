@@ -1,8 +1,8 @@
-import {autowired, service} from "coco-mvc";
+import {autowired, api} from "coco-mvc";
 import Axios from "../component/axios";
 
-@service()
-class UserService {
+@api()
+class UserApi {
 
   @autowired()
   axios: Axios;
@@ -14,4 +14,4 @@ class UserService {
 }
 
 
-export default UserService;
+export default UserApi;

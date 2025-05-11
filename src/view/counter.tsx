@@ -1,11 +1,12 @@
-import {reactive, view} from 'coco-mvc';
+import {bind, reactive, view} from 'coco-mvc';
 
 @view()
 class Counter {
   @reactive()
   count: number = 0;
 
-  handleClick = () => {
+  @bind()
+  handleClick () {
     this.count += 1;
   }
 
