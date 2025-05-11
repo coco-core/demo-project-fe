@@ -10,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cocojs/cli": "^0.0.1-alpha202504121038",
+    "@cocojs/cli": "^0.0.1-alpha202505111512",
     "@cocojs/typescript-transformer": "^0.0.10",
     "ts-patch": "3.1.2",
     "typescript": "5.3.3"
   },
   "dependencies": {
     "axios": "^1.8.2",
-    "coco-mvc": "^0.0.1-alpha202504121038"
+    "coco-mvc": "^0.0.1-alpha202505111512"
   }
 }
